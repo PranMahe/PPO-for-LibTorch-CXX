@@ -1,6 +1,6 @@
 #pragma once
 #include "PPOAgent.h"
-#include "CartPoleEnv.h"
+#include "environments/CartPoleEnv.h"
 
 
 template<typename EnvType>

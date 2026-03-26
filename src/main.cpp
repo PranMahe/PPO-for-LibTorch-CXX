@@ -5,10 +5,10 @@
 #include <iomanip>
 #include <torch/torch.h>
 
-#include "Config.h"
-#include "CartPoleEnv.h"
-#include "GymEnv.h"
-#include "PPOAgent.h"
+#include "config/Config.h"
+#include "environments/CartPoleEnv.h"
+#include "environments/GymEnv.h"
+#include "core/PPOAgent.h"
 
 namespace py = pybind11;
 

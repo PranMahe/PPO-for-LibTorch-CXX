@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ActorCritic.h"
-#include "Config.h"
+#include "networks/ActorCritic.h"
+#include "config/Config.h"
 
 #include <vector>
 #include <memory>

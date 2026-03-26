@@ -31,10 +31,10 @@ find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 # Source Files
 Set(SOURCES
     src/main.cpp
-    src/CartPoleEnv.cpp
-    src/GymEnv.cpp
-    src/ActorCritic.cpp
-    src/PPOAgent.cpp
+    src/environments/CartPoleEnv.cpp
+    src/environments/GymEnv.cpp
+    src/networks/ActorCritic.cpp
+    src/core/PPOAgent.cpp
 )
 
 # Executable
