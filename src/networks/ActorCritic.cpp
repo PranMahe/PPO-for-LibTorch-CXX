@@ -1,4 +1,4 @@
-#include "ActorCritic.h"
+#include "networks/ActorCritic.h"
 #include <torch/torch.h>
 #include <cmath>
 #include <stdexcept>

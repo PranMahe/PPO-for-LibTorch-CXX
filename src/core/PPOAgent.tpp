@@ -1,7 +1,8 @@
 #pragma once
-#include "PPOAgent.h"
-#include "environments/CartPoleEnv.h"
 
+#include "core/PPOAgent.h"
+#include "environments/CartPoleEnv.h"
+#include "environments/GymEnv.h"
 
 template<typename EnvType>
 void PPOAgent::collectRollouts(EnvType& env) {

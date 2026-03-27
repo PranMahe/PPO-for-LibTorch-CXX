@@ -1,13 +1,8 @@
 #pragma once
 
+#include "environments/StepResult.h"
 #include <vector>
 #include <random>
-
-struct StepResult {
-    std::vector<float> observation;
-    float reward;
-    bool done;
-};
 
 class CartPoleEnv {
 public:

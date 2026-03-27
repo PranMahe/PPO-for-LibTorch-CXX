@@ -62,7 +62,7 @@ if (WIN32)
     foreach (DLL ${TORCH_DLLS})
         add_custom_command(TARGET cxx_ppo_agent POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            ${DLLS}
+            ${DLL}
             $<TARGET_FILE_DIR:cxx_ppo_agent>
         )
     endforeach()

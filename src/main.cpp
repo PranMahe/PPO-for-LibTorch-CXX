@@ -34,14 +34,14 @@ float evaluate(PPOAgent& agent, EnvType& env, int numTrials, const Config& confi
             StepResult result;
             if (config.action_type == "discrete") {
                 auto [action, logProb, value] = network->selectAction(obsTensor);
-                std::ignore = logProb
-                std::ignore = value
+                std::ignore = logProb;
+                std::ignore = value;
                 result = env.step(action);
             }
             else {
                 auto [actionVec, logProb, value] = network->selectActionContinuous(obsTensor);
-                std::ignore = logProb
-                std::ignore = value
+                std::ignore = logProb;
+                std::ignore = value;
                 result = env.stepContinuous(actionVec);
             }
 
