@@ -62,31 +62,28 @@ Go to [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started
 
 Unzip it somewhere, e.g. `C:/libs/libtorch` on Windows.
 
-### 2. Update CMakeLists.txt
+### 2. Build
 
-Edit line 8 in `CMakeLists.txt` to point to your LibTorch path:
-
-```cmake
-set(Torch_DIR "C:/libs/libtorch/share/cmake/Torch")  # Windows
-# set(Torch_DIR "/home/user/libtorch/share/cmake/Torch")  # Linux
-```
-
-### 3. Build
-
+**Windows (Visual Studio):**
 ```bash
-cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake -B build -G "Visual Studio 17 2022" -DTorch_DIR="C:/libs/libtorch/share/cmake/Torch"
 cmake --build build --config Release
 ```
 
-### 4. Run
+**Linux / Mac:**
+```bash
+cmake -B build -DCMAKE_BUILD_TYPE=Release -DTorch_DIR="/path/to/libtorch/share/cmake/Torch"
+cmake --build build
+```
 
-Copy `config.json` next to the executable, then run:
+### 3. Run
 
+`config.json` is automatically copied next to the executable by the build step.
 ```bash
 # Windows
 ./build/Release/cxx_ppo_agent.exe
 
-# Linux
+# Linux / Mac
 ./build/cxx_ppo_agent
 ```
 

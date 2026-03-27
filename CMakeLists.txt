@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Libtorch
-set(Torch_DIR "C:/libs/libtorch/share/cmake/Torch")
+if(NOT DEFINED Torch_DIR)
+    set(Torch_DIR "C:/libs/libtorch/share/cmake/Torch")
+endif()
 find_package(Torch REQUIRED)
 
 # pybind11
