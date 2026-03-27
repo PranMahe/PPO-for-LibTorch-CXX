@@ -35,70 +35,12 @@ PPO-for-LibTorch-CXX/
 │   │   └── PPOAgent.tpp          # Templated collectRollouts()
 │   └── main.cpp
 ├── CMakeLists.txt
-├── config.json
-├── Dockerfile
-├── docker-compose.yml
-└── .dockerignore
+└── config.json
 ```
 
 ---
 
-## Quickstart with Docker (Recommended)
-
-Docker is the easiest way to run this, no need to install LibTorch, CMake, or manage Python paths manually.
-
-**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
-
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/PranMahe/PPO-for-LibTorch-CXX.git
-cd PPO-for-LibTorch-CXX
-```
-
-### 2. Choose your environment
-
-Edit `config.json` and set `"env"` to one of:
-
-| Value | Environment | Action Space |
-|---|---|---|
-| `"cartpole"` | CartPole-v1 (native C++) | Discrete |
-| `"lunarlander"` | LunarLander-v3 | Discrete |
-| `"mountaincar"` | MountainCarContinuous-v0 | Continuous |
-
-### 3. Build and run
-
-```bash
-# Build the image and start training
-docker compose up --build
-
-# To run again without rebuilding (config changes don't need a rebuild)
-docker compose up
-```
-
-Saved models are written to `./output/` on your machine.
-
-### 4. Change the environment without rebuilding
-
-The `config.json` is baked into the image at build time. To change env or hyperparameters after building:
-
-```bash
-# Rebuild with updated config
-docker compose up --build
-```
-
-Or override at runtime by mounting a different config:
-
-```bash
-docker run --rm \
-  -v $(pwd)/config.json:/app/config.json \
-  -v $(pwd)/output:/app/output \
-  ppo-libtorch-cxx
-```
-
----
-
-## Manual Build (Windows / Linux without Docker)
+## Manual Build
 
 ### Prerequisites
 
