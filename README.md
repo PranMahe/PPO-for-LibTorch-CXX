@@ -1,6 +1,6 @@
 # PPO in C++ with LibTorch
 
-A clean, from-scratch implementation of **Proximal Policy Optimisation (PPO)** in C++ using LibTorch. Supports discrete and continuous action spaces, tested on CartPole, LunarLander, and MountainCarContinuous.
+A clean, from-scratch implementation of **Proximal Policy Optimization (PPO)** in C++ using LibTorch. Supports discrete and continuous action spaces, tested on CartPole, LunarLander, and MountainCarContinuous using Gymnasium. 
 
 ---
 
@@ -45,7 +45,7 @@ PPO-for-LibTorch-CXX/
 
 ## Quickstart with Docker (Recommended)
 
-Docker is the easiest way to run this — no need to install LibTorch, CMake, or manage Python paths manually.
+Docker is the easiest way to run this, no need to install LibTorch, CMake, or manage Python paths manually.
 
 **Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
 
